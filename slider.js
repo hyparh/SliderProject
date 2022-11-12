@@ -47,14 +47,21 @@ const getFirstSlide = () => {
 };
 
 const getLastSlide = () => {
-    slider.style.transform = `translateX(${(length - 1) * 800}px)`;
+    slider.style.transform = `translateX(-${(length - 1) * 800}px)`;
     slideNumber = length;
 };
 
+const changeColor = () => {
+    resetBackground();
+    buttons[slideNumber - 1].style.backgroundColor = "white";
+}
+
 right.addEventListener("click", () => {
-    slideNumber < length ? nextSlide() : prevSlide();
+    slideNumber < length ? nextSlide() : getFirstSlide();
+    changeColor();
 });
 
 left.addEventListener("click", () => {
     slideNumber > 1 ? prevSlide() : getLastSlide();
+    changeColor();
 });
