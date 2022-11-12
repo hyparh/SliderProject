@@ -1,2 +1,2 @@
 # SliderProject
-A simple carousel-type slider for sliding photos back and forth using JS.
+A simple JS carousel-type slider for sliding photos back and forth via arrows or buttons.
